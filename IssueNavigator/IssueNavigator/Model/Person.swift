@@ -49,9 +49,10 @@ struct Person: Codable {
       }
     }
     
+    init(firstName: String, surname: String, issueCount: Int, birthDate: Date) {
+        self.firstName = firstName
+        self.surname = surname
+        self.issueCount = issueCount
+        self.birthDate = birthDate
+    }
 }
-
-
-
-
-

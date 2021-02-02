@@ -25,6 +25,4 @@ extension PersonViewCell: PersonCellView {
         dateOfBirthLabel.text = birthDate
         issueCountLabel.text = issueCount
     }
-    
-    
 }

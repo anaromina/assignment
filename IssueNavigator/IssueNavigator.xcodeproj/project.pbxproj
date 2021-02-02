@@ -12,7 +12,7 @@
 		9507FBBAB775FCBFA3F325AF /* Pods_IssueNavigatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7D5B17325AFAFAB0428CC3 /* Pods_IssueNavigatorTests.framework */; };
 		AD1F77CA25C8270F001025E8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1F77C925C8270F001025E8 /* Person.swift */; };
 		AD1F77CF25C831E1001025E8 /* issues.csv in Resources */ = {isa = PBXBuildFile; fileRef = AD1F77CC25C831E1001025E8 /* issues.csv */; };
-		AD1F77D025C831E1001025E8 /* file.csv in Resources */ = {isa = PBXBuildFile; fileRef = AD1F77CD25C831E1001025E8 /* file.csv */; };
+		AD1F77D025C831E1001025E8 /* huge.csv in Resources */ = {isa = PBXBuildFile; fileRef = AD1F77CD25C831E1001025E8 /* huge.csv */; };
 		AD1F77D125C831E1001025E8 /* small.csv in Resources */ = {isa = PBXBuildFile; fileRef = AD1F77CE25C831E1001025E8 /* small.csv */; };
 		AD4E836425C7F2C4007358E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4E836325C7F2C4007358E8 /* AppDelegate.swift */; };
 		AD4E836625C7F2C4007358E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4E836525C7F2C4007358E8 /* SceneDelegate.swift */; };
@@ -28,6 +28,13 @@
 		ADE05B9525C9388F001639D8 /* PersonListDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE05B9425C9388F001639D8 /* PersonListDatasource.swift */; };
 		ADE05B9925C93FC2001639D8 /* empty.csv in Resources */ = {isa = PBXBuildFile; fileRef = ADE05B9825C93FC2001639D8 /* empty.csv */; };
 		ADE05B9E25C944A0001639D8 /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE05B9D25C944A0001639D8 /* PersonListViewController.swift */; };
+		ADE05BA325C96175001639D8 /* PersonListViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE05BA225C96175001639D8 /* PersonListViewSpy.swift */; };
+		ADE05BA525C96238001639D8 /* PersonCellViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE05BA425C96238001639D8 /* PersonCellViewSpy.swift */; };
+		ADE05BA725C962F1001639D8 /* CSVSelectorViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE05BA625C962F1001639D8 /* CSVSelectorViewSpy.swift */; };
+		ADE05BA925C96866001639D8 /* CSVSelectorDatasourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE05BA825C96866001639D8 /* CSVSelectorDatasourceTests.swift */; };
+		ADE05BAB25C97B4C001639D8 /* PersonListDatasourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE05BAA25C97B4C001639D8 /* PersonListDatasourceTests.swift */; };
+		ADE05BAF25C98E97001639D8 /* CSVWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE05BAE25C98E97001639D8 /* CSVWorker.swift */; };
+		ADE05BB125C9973A001639D8 /* CSVWorkerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE05BB025C9973A001639D8 /* CSVWorkerMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +62,7 @@
 		98F31082D58E374DF5DEBA9C /* Pods_IssueNavigator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IssueNavigator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1F77C925C8270F001025E8 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		AD1F77CC25C831E1001025E8 /* issues.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = issues.csv; sourceTree = "<group>"; };
-		AD1F77CD25C831E1001025E8 /* file.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file.csv; sourceTree = "<group>"; };
+		AD1F77CD25C831E1001025E8 /* huge.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = huge.csv; sourceTree = "<group>"; };
 		AD1F77CE25C831E1001025E8 /* small.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = small.csv; sourceTree = "<group>"; };
 		AD4E836025C7F2C4007358E8 /* IssueNavigator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IssueNavigator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD4E836325C7F2C4007358E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +84,13 @@
 		ADE05B9425C9388F001639D8 /* PersonListDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListDatasource.swift; sourceTree = "<group>"; };
 		ADE05B9825C93FC2001639D8 /* empty.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty.csv; sourceTree = "<group>"; };
 		ADE05B9D25C944A0001639D8 /* PersonListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonListViewController.swift; sourceTree = "<group>"; };
+		ADE05BA225C96175001639D8 /* PersonListViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewSpy.swift; sourceTree = "<group>"; };
+		ADE05BA425C96238001639D8 /* PersonCellViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCellViewSpy.swift; sourceTree = "<group>"; };
+		ADE05BA625C962F1001639D8 /* CSVSelectorViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVSelectorViewSpy.swift; sourceTree = "<group>"; };
+		ADE05BA825C96866001639D8 /* CSVSelectorDatasourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVSelectorDatasourceTests.swift; sourceTree = "<group>"; };
+		ADE05BAA25C97B4C001639D8 /* PersonListDatasourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListDatasourceTests.swift; sourceTree = "<group>"; };
+		ADE05BAE25C98E97001639D8 /* CSVWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVWorker.swift; sourceTree = "<group>"; };
+		ADE05BB025C9973A001639D8 /* CSVWorkerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVWorkerMock.swift; sourceTree = "<group>"; };
 		C30180D6B92650ABBF4D6392 /* Pods-IssueNavigator-IssueNavigatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IssueNavigator-IssueNavigatorUITests.debug.xcconfig"; path = "Target Support Files/Pods-IssueNavigator-IssueNavigatorUITests/Pods-IssueNavigator-IssueNavigatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C31D22021E04FF8B9265D0A5 /* Pods_IssueNavigator_IssueNavigatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IssueNavigator_IssueNavigatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E966B3E302ED61FFE14890 /* Pods-IssueNavigatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IssueNavigatorTests.release.xcconfig"; path = "Target Support Files/Pods-IssueNavigatorTests/Pods-IssueNavigatorTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -139,7 +153,7 @@
 			children = (
 				ADE05B9825C93FC2001639D8 /* empty.csv */,
 				ADE05B9225C935F8001639D8 /* corrupted.csv */,
-				AD1F77CD25C831E1001025E8 /* file.csv */,
+				AD1F77CD25C831E1001025E8 /* huge.csv */,
 				AD1F77CC25C831E1001025E8 /* issues.csv */,
 				AD1F77CE25C831E1001025E8 /* small.csv */,
 			);
@@ -180,6 +194,7 @@
 				AD4E837125C7F2C6007358E8 /* Info.plist */,
 				ADE05B9A25C9446E001639D8 /* Model */,
 				ADE05B9F25C944BD001639D8 /* Controller */,
+				ADE05BAE25C98E97001639D8 /* CSVWorker.swift */,
 			);
 			path = IssueNavigator;
 			sourceTree = "<group>";
@@ -187,8 +202,12 @@
 		AD4E837925C7F2C6007358E8 /* IssueNavigatorTests */ = {
 			isa = PBXGroup;
 			children = (
+				ADE05BA125C9614A001639D8 /* Spies */,
 				AD4E837A25C7F2C6007358E8 /* IssueNavigatorTests.swift */,
 				AD4E837C25C7F2C6007358E8 /* Info.plist */,
+				ADE05BA825C96866001639D8 /* CSVSelectorDatasourceTests.swift */,
+				ADE05BAA25C97B4C001639D8 /* PersonListDatasourceTests.swift */,
+				ADE05BB025C9973A001639D8 /* CSVWorkerMock.swift */,
 			);
 			path = IssueNavigatorTests;
 			sourceTree = "<group>";
@@ -236,6 +255,16 @@
 				AD4E836525C7F2C4007358E8 /* SceneDelegate.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		ADE05BA125C9614A001639D8 /* Spies */ = {
+			isa = PBXGroup;
+			children = (
+				ADE05BA225C96175001639D8 /* PersonListViewSpy.swift */,
+				ADE05BA425C96238001639D8 /* PersonCellViewSpy.swift */,
+				ADE05BA625C962F1001639D8 /* CSVSelectorViewSpy.swift */,
+			);
+			path = Spies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,7 +379,7 @@
 				AD1F77CF25C831E1001025E8 /* issues.csv in Resources */,
 				AD4E837025C7F2C6007358E8 /* LaunchScreen.storyboard in Resources */,
 				ADE05B9925C93FC2001639D8 /* empty.csv in Resources */,
-				AD1F77D025C831E1001025E8 /* file.csv in Resources */,
+				AD1F77D025C831E1001025E8 /* huge.csv in Resources */,
 				AD4E836D25C7F2C6007358E8 /* Assets.xcassets in Resources */,
 				AD1F77D125C831E1001025E8 /* small.csv in Resources */,
 				AD4E836B25C7F2C4007358E8 /* Main.storyboard in Resources */,
@@ -490,6 +519,7 @@
 				ADE05B9E25C944A0001639D8 /* PersonListViewController.swift in Sources */,
 				AD4E836625C7F2C4007358E8 /* SceneDelegate.swift in Sources */,
 				ADE05B8D25C92237001639D8 /* PersonViewCell.swift in Sources */,
+				ADE05BAF25C98E97001639D8 /* CSVWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,7 +527,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADE05BA525C96238001639D8 /* PersonCellViewSpy.swift in Sources */,
+				ADE05BA325C96175001639D8 /* PersonListViewSpy.swift in Sources */,
 				AD4E837B25C7F2C6007358E8 /* IssueNavigatorTests.swift in Sources */,
+				ADE05BA925C96866001639D8 /* CSVSelectorDatasourceTests.swift in Sources */,
+				ADE05BA725C962F1001639D8 /* CSVSelectorViewSpy.swift in Sources */,
+				ADE05BAB25C97B4C001639D8 /* PersonListDatasourceTests.swift in Sources */,
+				ADE05BB125C9973A001639D8 /* CSVWorkerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

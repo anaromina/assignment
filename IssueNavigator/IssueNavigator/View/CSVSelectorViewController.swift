@@ -52,7 +52,7 @@ extension CSVSelectorViewController: CSVSelectorView {
         activityIndicator.stopAnimating()
     }
     
-    func navigateToList(with records: [Person]) {
+    func navigateToList(with records: [Person], skippedCount: Int) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let listViewController = storyboard.instantiateViewController(withIdentifier: "PersonListIdentifier") as! PersonListViewController
         let listDatasource = PersonListDatasource(persons: records)

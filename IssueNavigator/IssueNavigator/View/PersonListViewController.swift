@@ -59,6 +59,4 @@ extension PersonListViewController: PersonListView {
         tableView.tableFooterView = UIView()
         tableView.reloadData()
     }
-    
-    
 }

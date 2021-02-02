@@ -13,7 +13,7 @@ protocol CSVSelectorView: class {
     func startLoading()
     func stopLoading()
     func showFileError()
-    func navigateToList(with records: [Person])
+    func navigateToList(with records: [Person], skippedCount: Int)
 }
 
 protocol CSVSelectorDatasource {
@@ -25,6 +25,11 @@ protocol CSVSelectorDatasource {
 class CSVSelector: CSVSelectorDatasource {
     private var startTime: TimeInterval = 0
     private var endTime: TimeInterval = 0
+    private let worker: DatasourceWorkerProtocol
+    
+    init(worker: DatasourceWorkerProtocol = CSVWorker(path: "")) {
+        self.worker = worker
+    }
     
     weak private var view: CSVSelectorView?
     
@@ -41,55 +46,25 @@ class CSVSelector: CSVSelectorDatasource {
     }
     
     func didSelectFile(path: String) {
+        worker.updatePath(path: path)
+        
         view?.startLoading()
         self.startTime = Date().timeIntervalSince1970
         
-        parseCSV(path: path)
-    }
-    
-    private func parseCSV(path: String) {
-        DispatchQueue.global(qos: .background).async {
-            do {
-                guard let stream = InputStream(fileAtPath: path) else {
-                    self.view?.stopLoading()
-                    self.view?.showFileError()
-                    return
-                }
-                
-                var records = [Person]()
-                
-                let csv = try CSVReader(stream: stream, hasHeaderRow: true)
-                
-                let headerRow = csv.headerRow!
-                print("\(headerRow)")
-                
-                let decoder = CSVRowDecoder()
-                var malformedCount = 0
-                
-                while csv.next() != nil {
-                    do {
-                        let row = try decoder.decode(Person.self, from: csv)
-                        records.append(row)
-                    } catch is DecodingError {
-                        malformedCount += 1
-                    }
-                }
-                
-                self.endTime = Date().timeIntervalSince1970
-                
-                DispatchQueue.main.async {
-                    self.view?.stopLoading()
-                    print("number of records:\(records.count), number of skipped records:\(malformedCount)")
-                    print("time:\(self.elapsedTime)")
-                    self.view?.navigateToList(with: records)
-                }
-            } catch {
-                DispatchQueue.main.async {
-                    self.view?.stopLoading()
-                    self.view?.showFileError()
-                    print("could not open file")
-                }
+        worker.getRecords(completion: { [weak self] (result) in
+            guard let self = self else { return }
+            
+            self.endTime = Date().timeIntervalSince1970
+            self.view?.stopLoading()
+            
+            switch result {
+            case let .success((records, skippedCount)):
+                print("number of records:\(records.count), number of skipped records:\(skippedCount)")
+                print("time:\(self.elapsedTime)")
+                self.view?.navigateToList(with: records, skippedCount: skippedCount)
+            case .failure(_):
+                self.view?.showFileError()
             }
-        }
+        })
     }
 }
