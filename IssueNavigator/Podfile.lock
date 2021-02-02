@@ -1,0 +1,20 @@
+PODS:
+  - CSV.swift (2.4.3)
+  - FileBrowser (1.0.0)
+
+DEPENDENCIES:
+  - CSV.swift (~> 2.4.3)
+  - FileBrowser (~> 1.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - CSV.swift
+    - FileBrowser
+
+SPEC CHECKSUMS:
+  CSV.swift: d38741b349c067b4a6db42237cb0e2974d21ccac
+  FileBrowser: 2ca91ff61c9ea09665eb3b8f9e64a7a77e66a0bf
+
+PODFILE CHECKSUM: 58ca4f7b289f4b9507fe65f356278508fbb62f3b
+
+COCOAPODS: 1.10.1
