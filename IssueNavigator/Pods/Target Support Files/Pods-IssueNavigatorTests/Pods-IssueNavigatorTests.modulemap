@@ -1,0 +1,6 @@
+framework module Pods_IssueNavigatorTests {
+  umbrella header "Pods-IssueNavigatorTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

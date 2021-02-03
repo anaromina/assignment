@@ -2,12 +2,17 @@
 # platform :ios, '9.0'
 source 'https://github.com/CocoaPods/Specs.git'
 
+# ignore all warnings from all dependencies
+inhibit_all_warnings!
+
 target 'IssueNavigator' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+
   pod 'FileBrowser', '~> 1.0'
   pod 'CSV.swift', '~> 2.4.3'
-
+  pod 'SwiftLint'
+  
   # Pods for IssueNavigator
 
   target 'IssueNavigatorTests' do

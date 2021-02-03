@@ -10,13 +10,17 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    /**
+    Add CSV resources to device.
 
+    Calling this method copies  the `.csv` files from the App Bundle into the Documents folder.
+    */
     private func copyCSVs() {
         guard let resourcePath = Bundle.main.resourcePath else { return }
         do {
             let resources = try FileManager.default.contentsOfDirectory(atPath: resourcePath)
             let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
-            let filteredFiles = resources.filter{ $0.contains(".csv")}
+            let filteredFiles = resources.filter { $0.contains(".csv")}
             for fileName in filteredFiles {
                 if let documentsURL = documentsURL {
                     let sourceURL = Bundle.main.bundleURL.appendingPathComponent(fileName)
@@ -28,7 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         } catch { }
     }
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         copyCSVs()
@@ -50,6 +53,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
 }
-

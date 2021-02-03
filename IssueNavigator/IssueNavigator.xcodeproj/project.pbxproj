@@ -14,13 +14,13 @@
 		AD1F77CF25C831E1001025E8 /* issues.csv in Resources */ = {isa = PBXBuildFile; fileRef = AD1F77CC25C831E1001025E8 /* issues.csv */; };
 		AD1F77D025C831E1001025E8 /* huge.csv in Resources */ = {isa = PBXBuildFile; fileRef = AD1F77CD25C831E1001025E8 /* huge.csv */; };
 		AD1F77D125C831E1001025E8 /* small.csv in Resources */ = {isa = PBXBuildFile; fileRef = AD1F77CE25C831E1001025E8 /* small.csv */; };
+		AD3BF02725CAAD2C001FFB04 /* bad_format.csv in Resources */ = {isa = PBXBuildFile; fileRef = AD3BF02625CAAD2C001FFB04 /* bad_format.csv */; };
 		AD4E836425C7F2C4007358E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4E836325C7F2C4007358E8 /* AppDelegate.swift */; };
 		AD4E836625C7F2C4007358E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4E836525C7F2C4007358E8 /* SceneDelegate.swift */; };
 		AD4E836825C7F2C4007358E8 /* CSVSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4E836725C7F2C4007358E8 /* CSVSelectorViewController.swift */; };
 		AD4E836B25C7F2C4007358E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD4E836925C7F2C4007358E8 /* Main.storyboard */; };
 		AD4E836D25C7F2C6007358E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD4E836C25C7F2C6007358E8 /* Assets.xcassets */; };
 		AD4E837025C7F2C6007358E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD4E836E25C7F2C6007358E8 /* LaunchScreen.storyboard */; };
-		AD4E837B25C7F2C6007358E8 /* IssueNavigatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4E837A25C7F2C6007358E8 /* IssueNavigatorTests.swift */; };
 		AD4E838625C7F2C6007358E8 /* IssueNavigatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4E838525C7F2C6007358E8 /* IssueNavigatorUITests.swift */; };
 		ADE05B8D25C92237001639D8 /* PersonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE05B8C25C92237001639D8 /* PersonViewCell.swift */; };
 		ADE05B8F25C92F6B001639D8 /* CSVSelectorDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE05B8E25C92F6B001639D8 /* CSVSelectorDatasource.swift */; };
@@ -64,6 +64,7 @@
 		AD1F77CC25C831E1001025E8 /* issues.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = issues.csv; sourceTree = "<group>"; };
 		AD1F77CD25C831E1001025E8 /* huge.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = huge.csv; sourceTree = "<group>"; };
 		AD1F77CE25C831E1001025E8 /* small.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = small.csv; sourceTree = "<group>"; };
+		AD3BF02625CAAD2C001FFB04 /* bad_format.csv */ = {isa = PBXFileReference; lastKnownFileType = file; path = bad_format.csv; sourceTree = "<group>"; };
 		AD4E836025C7F2C4007358E8 /* IssueNavigator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IssueNavigator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD4E836325C7F2C4007358E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD4E836525C7F2C4007358E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,7 +74,6 @@
 		AD4E836F25C7F2C6007358E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD4E837125C7F2C6007358E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD4E837625C7F2C6007358E8 /* IssueNavigatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IssueNavigatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD4E837A25C7F2C6007358E8 /* IssueNavigatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueNavigatorTests.swift; sourceTree = "<group>"; };
 		AD4E837C25C7F2C6007358E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD4E838125C7F2C6007358E8 /* IssueNavigatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IssueNavigatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD4E838525C7F2C6007358E8 /* IssueNavigatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueNavigatorUITests.swift; sourceTree = "<group>"; };
@@ -151,6 +151,7 @@
 		AD1F77CB25C831CD001025E8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AD3BF02625CAAD2C001FFB04 /* bad_format.csv */,
 				ADE05B9825C93FC2001639D8 /* empty.csv */,
 				ADE05B9225C935F8001639D8 /* corrupted.csv */,
 				AD1F77CD25C831E1001025E8 /* huge.csv */,
@@ -185,16 +186,16 @@
 		AD4E836225C7F2C4007358E8 /* IssueNavigator */ = {
 			isa = PBXGroup;
 			children = (
-				AD1F77CB25C831CD001025E8 /* Resources */,
 				ADE05BA025C944CE001639D8 /* AppDelegate */,
-				ADE05B9C25C94489001639D8 /* View */,
+				ADE05BB225C9D605001639D8 /* CSVSelector */,
+				ADE05BB325C9D644001639D8 /* PersonList */,
+				ADE05B9A25C9446E001639D8 /* Model */,
+				ADE05BB425C9D67D001639D8 /* Utilities */,
+				AD1F77CB25C831CD001025E8 /* Resources */,
 				AD4E836925C7F2C4007358E8 /* Main.storyboard */,
 				AD4E836C25C7F2C6007358E8 /* Assets.xcassets */,
 				AD4E836E25C7F2C6007358E8 /* LaunchScreen.storyboard */,
 				AD4E837125C7F2C6007358E8 /* Info.plist */,
-				ADE05B9A25C9446E001639D8 /* Model */,
-				ADE05B9F25C944BD001639D8 /* Controller */,
-				ADE05BAE25C98E97001639D8 /* CSVWorker.swift */,
 			);
 			path = IssueNavigator;
 			sourceTree = "<group>";
@@ -203,11 +204,10 @@
 			isa = PBXGroup;
 			children = (
 				ADE05BA125C9614A001639D8 /* Spies */,
-				AD4E837A25C7F2C6007358E8 /* IssueNavigatorTests.swift */,
+				ADE05BB825CAA368001639D8 /* Mocks */,
 				AD4E837C25C7F2C6007358E8 /* Info.plist */,
 				ADE05BA825C96866001639D8 /* CSVSelectorDatasourceTests.swift */,
 				ADE05BAA25C97B4C001639D8 /* PersonListDatasourceTests.swift */,
-				ADE05BB025C9973A001639D8 /* CSVWorkerMock.swift */,
 			);
 			path = IssueNavigatorTests;
 			sourceTree = "<group>";
@@ -229,25 +229,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		ADE05B9C25C94489001639D8 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				ADE05B8C25C92237001639D8 /* PersonViewCell.swift */,
-				ADE05B9D25C944A0001639D8 /* PersonListViewController.swift */,
-				AD4E836725C7F2C4007358E8 /* CSVSelectorViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		ADE05B9F25C944BD001639D8 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				ADE05B8E25C92F6B001639D8 /* CSVSelectorDatasource.swift */,
-				ADE05B9425C9388F001639D8 /* PersonListDatasource.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		ADE05BA025C944CE001639D8 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +248,41 @@
 			path = Spies;
 			sourceTree = "<group>";
 		};
+		ADE05BB225C9D605001639D8 /* CSVSelector */ = {
+			isa = PBXGroup;
+			children = (
+				ADE05B8E25C92F6B001639D8 /* CSVSelectorDatasource.swift */,
+				AD4E836725C7F2C4007358E8 /* CSVSelectorViewController.swift */,
+			);
+			path = CSVSelector;
+			sourceTree = "<group>";
+		};
+		ADE05BB325C9D644001639D8 /* PersonList */ = {
+			isa = PBXGroup;
+			children = (
+				ADE05B8C25C92237001639D8 /* PersonViewCell.swift */,
+				ADE05B9425C9388F001639D8 /* PersonListDatasource.swift */,
+				ADE05B9D25C944A0001639D8 /* PersonListViewController.swift */,
+			);
+			path = PersonList;
+			sourceTree = "<group>";
+		};
+		ADE05BB425C9D67D001639D8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				ADE05BAE25C98E97001639D8 /* CSVWorker.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		ADE05BB825CAA368001639D8 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				ADE05BB025C9973A001639D8 /* CSVWorkerMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -276,6 +292,7 @@
 			buildPhases = (
 				32297463E4F41301F964CEEA /* [CP] Check Pods Manifest.lock */,
 				AD4E835C25C7F2C4007358E8 /* Sources */,
+				ADE05BB525C9F079001639D8 /* ShellScript */,
 				AD4E835D25C7F2C4007358E8 /* Frameworks */,
 				AD4E835E25C7F2C4007358E8 /* Resources */,
 				EA41BC2707E506A07B63D570 /* [CP] Embed Pods Frameworks */,
@@ -380,6 +397,7 @@
 				AD4E837025C7F2C6007358E8 /* LaunchScreen.storyboard in Resources */,
 				ADE05B9925C93FC2001639D8 /* empty.csv in Resources */,
 				AD1F77D025C831E1001025E8 /* huge.csv in Resources */,
+				AD3BF02725CAAD2C001FFB04 /* bad_format.csv in Resources */,
 				AD4E836D25C7F2C6007358E8 /* Assets.xcassets in Resources */,
 				AD1F77D125C831E1001025E8 /* small.csv in Resources */,
 				AD4E836B25C7F2C4007358E8 /* Main.storyboard in Resources */,
@@ -470,6 +488,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		ADE05BB525C9F079001639D8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		E0012530944BB31C467D49FE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -529,7 +564,6 @@
 			files = (
 				ADE05BA525C96238001639D8 /* PersonCellViewSpy.swift in Sources */,
 				ADE05BA325C96175001639D8 /* PersonListViewSpy.swift in Sources */,
-				AD4E837B25C7F2C6007358E8 /* IssueNavigatorTests.swift in Sources */,
 				ADE05BA925C96866001639D8 /* CSVSelectorDatasourceTests.swift in Sources */,
 				ADE05BA725C962F1001639D8 /* CSVSelectorViewSpy.swift in Sources */,
 				ADE05BAB25C97B4C001639D8 /* PersonListDatasourceTests.swift in Sources */,

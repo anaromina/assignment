@@ -35,6 +35,4 @@ class CSVSelectorViewSpy: CSVSelectorView {
         self.records = records
         self.skippedCount = skippedCount
     }
-    
-    
 }

@@ -8,15 +8,16 @@
 
 import Foundation
 
-//"First name", "Sur name", "Issue count", "Date of birth" - CSV header
+// "First name", "Sur name", "Issue count", "Date of birth" - CSV header
 
+/// Model for a CSV row
 struct Person: Codable {
-    var firstName: String
-    var surname: String
-    var issueCount: Int
-    var birthDate: Date
+    var firstName: String = ""
+    var surname: String = ""
+    var issueCount: Int = 10
+    var birthDate: Date = Date()
     
-    private enum CodingKeys : String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case firstName = "First name"
         case surname = "Sur name"
         case issueCount = "Issue count"

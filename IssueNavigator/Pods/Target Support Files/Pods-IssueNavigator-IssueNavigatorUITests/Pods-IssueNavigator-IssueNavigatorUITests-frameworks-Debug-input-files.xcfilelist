@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-IssueNavigator-IssueNavigatorUITests/Pods-IssueNavigator-IssueNavigatorUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CSV.swift/CSV.framework
+${BUILT_PRODUCTS_DIR}/FileBrowser/FileBrowser.framework

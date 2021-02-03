@@ -25,6 +25,4 @@ class PersonListViewSpy: PersonListView {
     func showNoContent(with message: String) {
         noContentMessage = message
     }
-    
-    
 }

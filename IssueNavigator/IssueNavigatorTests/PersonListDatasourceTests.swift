@@ -14,7 +14,7 @@ class PersonListDatasourceTests: XCTestCase {
     private var systemUnderTest: PersonListDatasource!
     private let date = Date()
     
-    private func createArray(count: Int) -> [Person] {
+    private func createPersonsArray(count: Int) -> [Person] {
         var records = [Person]()
         for _ in 0..<count {
             records.append(Person(firstName: "John", surname: "Doe", issueCount: 5, birthDate: date))
@@ -24,7 +24,7 @@ class PersonListDatasourceTests: XCTestCase {
     }
 
     func test_numberOfPersons_returnsPersonsCount() {
-        systemUnderTest = PersonListDatasource(persons: createArray(count: 5))
+        systemUnderTest = PersonListDatasource(persons: createPersonsArray(count: 5))
         systemUnderTest.attach(view: PersonListViewSpy())
         systemUnderTest.setupView()
         
@@ -32,7 +32,7 @@ class PersonListDatasourceTests: XCTestCase {
     }
     
     func test_numberOfPersons_returns0_whenEmpty() {
-        systemUnderTest = PersonListDatasource(persons: createArray(count: 0))
+        systemUnderTest = PersonListDatasource(persons: createPersonsArray(count: 0))
         systemUnderTest.attach(view: PersonListViewSpy())
         systemUnderTest.setupView()
         
@@ -40,7 +40,7 @@ class PersonListDatasourceTests: XCTestCase {
     }
     
     func test_viewDidLoad_displaysTitle() {
-        systemUnderTest = PersonListDatasource(persons: createArray(count: 5))
+        systemUnderTest = PersonListDatasource(persons: createPersonsArray(count: 5))
         let view = PersonListViewSpy()
         systemUnderTest.attach(view: view)
         systemUnderTest.setupView()
@@ -49,7 +49,7 @@ class PersonListDatasourceTests: XCTestCase {
     }
     
     func test_viewDidLoad_displaysPersons() {
-        systemUnderTest = PersonListDatasource(persons: createArray(count: 5))
+        systemUnderTest = PersonListDatasource(persons: createPersonsArray(count: 5))
         let view = PersonListViewSpy()
         systemUnderTest.attach(view: view)
         systemUnderTest.setupView()
@@ -58,7 +58,7 @@ class PersonListDatasourceTests: XCTestCase {
     }
     
     func test_viewDidLoad_displaysEmptyMessage() {
-        systemUnderTest = PersonListDatasource(persons: createArray(count: 0))
+        systemUnderTest = PersonListDatasource(persons: createPersonsArray(count: 0))
         let view = PersonListViewSpy()
         systemUnderTest.attach(view: view)
         systemUnderTest.setupView()
@@ -67,7 +67,7 @@ class PersonListDatasourceTests: XCTestCase {
     }
     
     func test_configureCell_displayedName() {
-        systemUnderTest = PersonListDatasource(persons: createArray(count: 1))
+        systemUnderTest = PersonListDatasource(persons: createPersonsArray(count: 1))
         let view = PersonListViewSpy()
         systemUnderTest.attach(view: view)
         systemUnderTest.setupView()
@@ -79,7 +79,7 @@ class PersonListDatasourceTests: XCTestCase {
     }
     
     func test_configureCell_displayedSurname() {
-        systemUnderTest = PersonListDatasource(persons: createArray(count: 1))
+        systemUnderTest = PersonListDatasource(persons: createPersonsArray(count: 1))
         let view = PersonListViewSpy()
         systemUnderTest.attach(view: view)
         systemUnderTest.setupView()
@@ -91,7 +91,7 @@ class PersonListDatasourceTests: XCTestCase {
     }
     
     func test_configureCell_displayedCount() {
-        systemUnderTest = PersonListDatasource(persons: createArray(count: 1))
+        systemUnderTest = PersonListDatasource(persons: createPersonsArray(count: 1))
         let view = PersonListViewSpy()
         systemUnderTest.attach(view: view)
         systemUnderTest.setupView()
@@ -103,7 +103,7 @@ class PersonListDatasourceTests: XCTestCase {
     }
     
     func test_configureCell_displayedDate() {
-        systemUnderTest = PersonListDatasource(persons: createArray(count: 1))
+        systemUnderTest = PersonListDatasource(persons: createPersonsArray(count: 1))
         let view = PersonListViewSpy()
         systemUnderTest.attach(view: view)
         systemUnderTest.setupView()
