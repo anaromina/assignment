@@ -3,7 +3,7 @@
 
 Browses through Documents directory for CSV files and displays a list of people and the issue assigned to them.
 
-![https://j.gifs.com/ROZvYw.gif]
+![Example](https://j.gifs.com/ROZvYw.gif)
 
 ## Development setup
 
