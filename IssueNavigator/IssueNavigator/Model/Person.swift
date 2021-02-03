@@ -12,10 +12,10 @@ import Foundation
 
 /// Model for a CSV row
 struct Person: Codable {
-    var firstName: String = ""
-    var surname: String = ""
-    var issueCount: Int = 10
-    var birthDate: Date = Date()
+    var firstName: String
+    var surname: String
+    var issueCount: Int
+    var birthDate: Date
     
     private enum CodingKeys: String, CodingKey {
         case firstName = "First name"
@@ -24,12 +24,9 @@ struct Person: Codable {
         case birthDate = "Date of birth"
     }
     
-    static let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-        formatter.calendar = Calendar(identifier: .iso8601)
-        formatter.timeZone = TimeZone(secondsFromGMT: 0)
-        formatter.locale = Locale(identifier: "en_US_POSIX")
+    static let dateFormatter: ISO8601DateFormatter = {
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withFullDate, .withDashSeparatorInDate, .withColonSeparatorInTime]
         return formatter
     }()
     

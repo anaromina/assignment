@@ -12,7 +12,7 @@ import XCTest
 class PersonListDatasourceTests: XCTestCase {
     
     private var systemUnderTest: PersonListDatasource!
-    private let date = Date()
+    private let date = Date.init(timeIntervalSince1970: 38473482)
     
     private func createPersonsArray(count: Int) -> [Person] {
         var records = [Person]()
@@ -111,7 +111,7 @@ class PersonListDatasourceTests: XCTestCase {
         let cell = PersonCellViewSpy()
         systemUnderTest.configureCell(cell, at: 0)
         
-        XCTAssertEqual(cell.displayedBirthDate, "\(date)")
+        XCTAssertEqual(cell.displayedBirthDate, "March 22, 1971")
     }
 
 }

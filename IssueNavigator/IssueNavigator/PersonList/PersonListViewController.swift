@@ -10,7 +10,7 @@ import UIKit
 
 /// Draws a list of persons
 class PersonListViewController: UITableViewController {
-    var dataSource: PersonListDatasource = PersonListDatasource(persons: [])
+    var dataSource: PersonListDatasource = PersonListDatasource(persons: [], skippedRowsCount: 0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +44,23 @@ class PersonListViewController: UITableViewController {
         dataSource.configureCell(cell, at: indexPath.row)
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        label.textColor = #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1)
+        label.font = UIFont.boldSystemFont(ofSize: 20.0)
+        label.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        
+        label.text = "Total: \(dataSource.numberOfPersons) | Corrupted: \(dataSource.numberOfSkippedRows)"
+        label.layoutIfNeeded()
+        return label
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40.0
     }
 }
 

@@ -59,7 +59,7 @@ class IssueNavigatorUITests: XCTestCase {
         let activityIndicator = app.activityIndicators.element
         
         XCTAssertEqual(activityIndicator.label, "In progress")
-        XCTAssert(app.tables.cells.firstMatch.waitForExistence(timeout: 50))
+        XCTAssert(app.tables.cells.firstMatch.waitForExistence(timeout: 30))
     }
 
     func testLaunchPerformance() {

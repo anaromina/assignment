@@ -76,7 +76,7 @@ extension CSVSelectorViewController: CSVSelectorView {
             fatalError("Could not instantiate a PersonListViewController object!")
         }
         
-        let listDatasource = PersonListDatasource(persons: records)
+        let listDatasource = PersonListDatasource(persons: records, skippedRowsCount: skippedCount)
         listViewController.dataSource = listDatasource
         self.show(listViewController, sender: nil)
     }
