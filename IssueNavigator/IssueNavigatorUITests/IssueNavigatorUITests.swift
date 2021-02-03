@@ -54,17 +54,12 @@ class IssueNavigatorUITests: XCTestCase {
     }
     
     func testLoadCSV_withLargeFile_shouldDisplayInfo() {
-        //number of records:1012897, number of skipped records:174
         app.tables.staticTexts["huge.csv"].tap()
         
         let activityIndicator = app.activityIndicators.element
         
         XCTAssertEqual(activityIndicator.label, "In progress")
-        
-        XCTAssert(app.tables.cells.element.waitForExistence(timeout: 300))
-        let number = app.tables.cells.count
-        
-        XCTAssert(number > 0)
+        XCTAssert(app.tables.cells.firstMatch.waitForExistence(timeout: 50))
     }
 
     func testLaunchPerformance() {

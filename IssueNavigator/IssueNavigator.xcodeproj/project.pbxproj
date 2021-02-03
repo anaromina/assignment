@@ -12,7 +12,6 @@
 		9507FBBAB775FCBFA3F325AF /* Pods_IssueNavigatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7D5B17325AFAFAB0428CC3 /* Pods_IssueNavigatorTests.framework */; };
 		AD1F77CA25C8270F001025E8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1F77C925C8270F001025E8 /* Person.swift */; };
 		AD1F77CF25C831E1001025E8 /* issues.csv in Resources */ = {isa = PBXBuildFile; fileRef = AD1F77CC25C831E1001025E8 /* issues.csv */; };
-		AD1F77D025C831E1001025E8 /* huge.csv in Resources */ = {isa = PBXBuildFile; fileRef = AD1F77CD25C831E1001025E8 /* huge.csv */; };
 		AD1F77D125C831E1001025E8 /* small.csv in Resources */ = {isa = PBXBuildFile; fileRef = AD1F77CE25C831E1001025E8 /* small.csv */; };
 		AD3BF02725CAAD2C001FFB04 /* bad_format.csv in Resources */ = {isa = PBXBuildFile; fileRef = AD3BF02625CAAD2C001FFB04 /* bad_format.csv */; };
 		AD4E836425C7F2C4007358E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4E836325C7F2C4007358E8 /* AppDelegate.swift */; };
@@ -22,6 +21,7 @@
 		AD4E836D25C7F2C6007358E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD4E836C25C7F2C6007358E8 /* Assets.xcassets */; };
 		AD4E837025C7F2C6007358E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD4E836E25C7F2C6007358E8 /* LaunchScreen.storyboard */; };
 		AD4E838625C7F2C6007358E8 /* IssueNavigatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4E838525C7F2C6007358E8 /* IssueNavigatorUITests.swift */; };
+		AD6D678725CAC52E00E9F796 /* huge.csv in Resources */ = {isa = PBXBuildFile; fileRef = AD6D678625CAC52D00E9F796 /* huge.csv */; };
 		ADE05B8D25C92237001639D8 /* PersonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE05B8C25C92237001639D8 /* PersonViewCell.swift */; };
 		ADE05B8F25C92F6B001639D8 /* CSVSelectorDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE05B8E25C92F6B001639D8 /* CSVSelectorDatasource.swift */; };
 		ADE05B9325C935F8001639D8 /* corrupted.csv in Resources */ = {isa = PBXBuildFile; fileRef = ADE05B9225C935F8001639D8 /* corrupted.csv */; };
@@ -62,7 +62,6 @@
 		98F31082D58E374DF5DEBA9C /* Pods_IssueNavigator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IssueNavigator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1F77C925C8270F001025E8 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		AD1F77CC25C831E1001025E8 /* issues.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = issues.csv; sourceTree = "<group>"; };
-		AD1F77CD25C831E1001025E8 /* huge.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = huge.csv; sourceTree = "<group>"; };
 		AD1F77CE25C831E1001025E8 /* small.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = small.csv; sourceTree = "<group>"; };
 		AD3BF02625CAAD2C001FFB04 /* bad_format.csv */ = {isa = PBXFileReference; lastKnownFileType = file; path = bad_format.csv; sourceTree = "<group>"; };
 		AD4E836025C7F2C4007358E8 /* IssueNavigator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IssueNavigator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +77,7 @@
 		AD4E838125C7F2C6007358E8 /* IssueNavigatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IssueNavigatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD4E838525C7F2C6007358E8 /* IssueNavigatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueNavigatorUITests.swift; sourceTree = "<group>"; };
 		AD4E838725C7F2C6007358E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD6D678625CAC52D00E9F796 /* huge.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = huge.csv; sourceTree = "<group>"; };
 		ADE05B8C25C92237001639D8 /* PersonViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewCell.swift; sourceTree = "<group>"; };
 		ADE05B8E25C92F6B001639D8 /* CSVSelectorDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVSelectorDatasource.swift; sourceTree = "<group>"; };
 		ADE05B9225C935F8001639D8 /* corrupted.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = corrupted.csv; sourceTree = "<group>"; };
@@ -151,10 +151,10 @@
 		AD1F77CB25C831CD001025E8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AD6D678625CAC52D00E9F796 /* huge.csv */,
 				AD3BF02625CAAD2C001FFB04 /* bad_format.csv */,
 				ADE05B9825C93FC2001639D8 /* empty.csv */,
 				ADE05B9225C935F8001639D8 /* corrupted.csv */,
-				AD1F77CD25C831E1001025E8 /* huge.csv */,
 				AD1F77CC25C831E1001025E8 /* issues.csv */,
 				AD1F77CE25C831E1001025E8 /* small.csv */,
 			);
@@ -396,12 +396,12 @@
 				AD1F77CF25C831E1001025E8 /* issues.csv in Resources */,
 				AD4E837025C7F2C6007358E8 /* LaunchScreen.storyboard in Resources */,
 				ADE05B9925C93FC2001639D8 /* empty.csv in Resources */,
-				AD1F77D025C831E1001025E8 /* huge.csv in Resources */,
 				AD3BF02725CAAD2C001FFB04 /* bad_format.csv in Resources */,
 				AD4E836D25C7F2C6007358E8 /* Assets.xcassets in Resources */,
 				AD1F77D125C831E1001025E8 /* small.csv in Resources */,
 				AD4E836B25C7F2C4007358E8 /* Main.storyboard in Resources */,
 				ADE05B9325C935F8001639D8 /* corrupted.csv in Resources */,
+				AD6D678725CAC52E00E9F796 /* huge.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
