@@ -16,8 +16,6 @@ and then open ```IssueNavigator.xcworkspace``` to run the app.
 
 ## Meta
 
-Romina – romina.uncrop@softvision.com
-
 [https://github.com/anaromina/](https://github.com/anaromina/)
 
 [swift-image]:https://img.shields.io/badge/swift-3.0-orange.svg
